@@ -53,7 +53,7 @@ const Footer = () => {
   </footer>
 }
 
-const Home = () => {
+const App = () => {
   return (
     <div>
       <Header/>
@@ -62,4 +62,4 @@ const Home = () => {
   )
 }
 
-ReactDom.render(<Home/>,document.getElementById('root'))
+ReactDom.render(<App/>,document.getElementById('root'))
