@@ -11,6 +11,26 @@ import ReactDom from 'react-dom'
 // CSS
 import './main.css'
 
+const RenderList = props => {
+  const cars = [
+  { id: 1, name: "Toyota MR2", img: "asd", desc: "A Japanese Car" },
+  { id: 2, name: "Lexus IS300", img: "asdd", desc: "Another Japanese Car" },
+  { id: 3, name: "Nissan Silvia", img: "ssad", desc: "Yet Another Japanese Car" }
+  ];
+
+  return (
+    <section>
+      {cars.map(car => (
+        <div key={car.id}>
+          <h2>{car.name}</h2>
+          <img src={car.img} alt={car.desc} />
+        </div>
+      ))}
+    </section>
+  )
+}
+
+
 const Carpicture = () => { return <img className="car-img" src="assets/images/bmwm3.jpeg" alt="A bimmer" /> }
 
 const Cartitle = () => { return <h2>1990 BMW M3</h2> }
@@ -21,9 +41,7 @@ const Carlist = () => {
   return (
     <section className="list-box">
       <div className="img-box">
-        <Carpicture/>
-        <Cartitle/>
-        <Cardesc/>
+        <RenderList/>
       </div>
     </section>
   )
@@ -32,11 +50,6 @@ const Carlist = () => {
 const App = () => {
   return (
     <div className="list-contain">
-      <Carlist />
-      <Carlist />
-      <Carlist />
-      <Carlist />
-      <Carlist />
       <Carlist />
     </div>
   )
