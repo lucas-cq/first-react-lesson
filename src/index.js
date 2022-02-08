@@ -13,36 +13,34 @@ import './main.css'
 
 const RenderList = props => {
   const cars = [
-  { id: 1, name: "Toyota MR2", img: "asd", desc: "A Japanese Car" },
-  { id: 2, name: "Lexus IS300", img: "asdd", desc: "Another Japanese Car" },
-  { id: 3, name: "Nissan Silvia", img: "ssad", desc: "Yet Another Japanese Car" }
+  { id: 1, name: "Toyota MR2", img: "assets/images/mr2.jpg", desc: "A Japanese Car" },
+  { id: 2, name: "Lexus IS300", img: "assets/images/is300.jpg", desc: "Another Japanese Car" },
+  { id: 3, name: "Nissan Silvia", img: "assets/images/s14.jpg", desc: "Yet Another Japanese Car" }
   ];
 
   return (
-    <section>
+    <div className="list-box">
       {cars.map(car => (
         <div key={car.id}>
           <h2>{car.name}</h2>
-          <img src={car.img} alt={car.desc} />
+          <img src={car.img} alt={car.desc} className="car-img"/>
         </div>
       ))}
-    </section>
+    </div>
   )
 }
 
 
-const Carpicture = () => { return <img className="car-img" src="assets/images/bmwm3.jpeg" alt="A bimmer" /> }
+// const Carpicture = () => { return <img className="car-img" src="assets/images/bmwm3.jpeg" alt="A bimmer" /> }
 
-const Cartitle = () => { return <h2>1990 BMW M3</h2> }
+// const Cartitle = () => { return <h2>1990 BMW M3</h2> }
 
-const Cardesc = () => { return <p>The best german car of the 90's</p> }
+// const Cardesc = () => { return <p>The best german car of the 90's</p> }
 
 const Carlist = () => { 
   return (
-    <section className="list-box">
-      <div className="img-box">
+    <section>
         <RenderList/>
-      </div>
     </section>
   )
  }
