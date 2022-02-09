@@ -21,9 +21,9 @@ const RenderList = props => {
   return (
     <div className="list-box">
       {cars.map(car => (
-        <div key={car.id}>
-          <h2>{car.name}</h2>
+        <div key={car.id} className="ind-wrap">
           <img src={car.img} alt={car.desc} className="car-img"/>
+          <h2>{car.name}</h2>
         </div>
       ))}
     </div>

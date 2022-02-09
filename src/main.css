@@ -3,32 +3,21 @@
 /* ***** */
 
 .car-img {
-  width: 400px;
+  max-width: 400px;
+  max-height: 225px;
   border-radius: 14px 14px 0px 0px;
-}
-
-/* ********* */
-/* Image Box */
-/* ********* */
-
-.img-box {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 15px;
 }
 
 .list-box {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: 15px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-.list-contain {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.ind-wrap {
+  border: 1px solid #2c3038;
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px #1d2126;
+  margin: 1rem;
 }
